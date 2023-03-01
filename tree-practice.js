@@ -106,11 +106,16 @@ function balancedTree (rootNode) {
 
 
 function countNodes (rootNode) {
-  // Your code here
+
+  if (!rootNode) return 0;
+  let l = countNodes(rootNode.left);
+  let r = countNodes(rootNode.right);
+    return 1+l+r;
 }
 
 function getParentNode (rootNode, target) {
-  // Your code here
+  if (rootNode === target) return null;
+  
 }
 
 function inOrderPredecessor (rootNode, target) {
