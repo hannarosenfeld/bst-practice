@@ -196,3 +196,101 @@ Example:
         / \     \
        2   4     8
 ```
+
+## In-Order Predecessor
+Fill out inOrderPredecessor which takes the RootNode of a binary tree and a target value and returns the Node that comes before the target value in an in-order traversal.
+
+If the target is the first value in an in-order traversal, return null.
+
+    target: 4
+    Input:
+          4
+        /   \
+       2     6
+      / \   / \
+     1   3 5   7
+
+    Output: 3
+Delete Node in a Binary Search Tree
+Fill out inOrderPredecessor which takes the RootNode of a binary tree and a target, and deletes the target Node.
+
+To delete a Node with no children, set its parent's pointer to null.
+
+To delete a Node with one child, replace it with it's child. This operation is similar to deleting a Node in a linked list.
+
+To delete a Node with two children, replace the target Node's value with its in-order predecessor or successor, then delete the in-order predecessor or successor you used. You may need to do some additional research for details on this operation.
+
+If the target value is not in the tree, return undefined.
+
+Example:
+
+    Input:      Target: 5
+    Tree:
+            5
+          /   \
+         3     7
+        / \   / \
+       2   4 6   8
+
+    Output:
+            4
+          /   \
+         3     7
+        /     / \
+       2     6   8
+
+    Or:
+            6
+          /   \
+         3     7
+        / \     \
+       2   4     8
+
+# In-Order Predecessor
+Fill out inOrderPredecessor which takes the RootNode of a binary tree and a target value and returns the Node that comes before the target value in an in-order traversal.
+
+If the target is the first value in an in-order traversal, return null.
+
+    target: 4
+    Input:
+          4
+        /   \
+       2     6
+      / \   / \
+     1   3 5   7
+
+    Output: 3
+Delete Node in a Binary Search Tree
+Fill out inOrderPredecessor which takes the RootNode of a binary tree and a target, and deletes the target Node.
+
+To delete a Node with no children, set its parent's pointer to null.
+
+To delete a Node with one child, replace it with it's child. This operation is similar to deleting a Node in a linked list.
+
+To delete a Node with two children, replace the target Node's value with its in-order predecessor or successor, then delete the in-order predecessor or successor you used. You may need to do some additional research for details on this operation.
+
+If the target value is not in the tree, return undefined.
+
+Example:
+
+    Input:      Target: 5
+    Tree:
+            5
+          /   \
+         3     7
+        / \   / \
+       2   4 6   8
+
+    Output:
+            4
+          /   \
+         3     7
+        /     / \
+       2     6   8
+
+    Or:
+            6
+          /   \
+         3     7
+        / \     \
+       2   4     8

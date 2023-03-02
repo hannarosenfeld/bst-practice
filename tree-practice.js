@@ -140,7 +140,7 @@ function getParentNode (rootNode, target) {
 
 
 function inOrderPredecessor (rootNode, target) {
-    
+
 }
 
 function deleteNodeBST(rootNode, target) {
