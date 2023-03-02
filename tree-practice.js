@@ -114,12 +114,33 @@ function countNodes (rootNode) {
 }
 
 function getParentNode (rootNode, target) {
-  if (rootNode === target) return null;
-  
+  if (rootNode.val === target) return null;
+  // returns the parent node of the node with a given value
+  const queue = [];
+  queue.push(rootNode);
+  while (queue.length) {
+    const curr = queue.shift();
+
+    // check if target is left or right from curr position
+    // if so return curr
+    //if (curr.left.val === target) console.log("curr.val: ", curr.val, "curr.left.val: ", curr.left.val, "target: ", target);
+    if (curr.left && curr.left.val === target) return curr;
+
+    //if (curr.right.val === target) console.log("curr.right.val: ", curr.right.val, "target: ", target);
+    if (curr.right && curr.right.val === target) return curr;
+
+    // Repopulate the queue
+    if (curr.left) queue.push(curr.left);
+    if (curr.right) queue.push(curr.right);
+  }
+
+  return;
 }
 
+
+
 function inOrderPredecessor (rootNode, target) {
-  // Your code here
+    
 }
 
 function deleteNodeBST(rootNode, target) {
